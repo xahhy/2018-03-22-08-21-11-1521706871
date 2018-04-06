@@ -44,6 +44,6 @@ public class Teacher extends Person {
     }
 
     public boolean isTeaching(Student student) {
-        return this.classes.contains(student.getKlass());
+        return classes.stream().anyMatch(klass -> klass.isIn(student));
     }
 }

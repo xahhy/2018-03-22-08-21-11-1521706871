@@ -34,6 +34,10 @@ public class Klass {
         student.setKlass(this);
     }
 
+    public boolean isIn(Student student) {
+        return student.getKlass().getNumber().equals(this.number);
+    }
+
     @Override
     public boolean equals(Object obj) {
         if(this == obj) return true;
@@ -41,6 +45,5 @@ public class Klass {
         if(this.getClass() != obj.getClass()) return false; //如果不死同一个类，则必然false
         Klass that = (Klass) obj;
         return that.getNumber().equals(this.number);
-
     }
 }
