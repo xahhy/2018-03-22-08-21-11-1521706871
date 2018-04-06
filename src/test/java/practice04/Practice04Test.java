@@ -15,7 +15,7 @@ public class Practice04Test {
     @Test
     public void should_person_have_an_introduce_method_which_introduce_person_with_name_and_age() throws Exception {
         Person tom = new Person("Tom", 21);
-        String introduce = tom.introduce();
+        String introduce = tom.basicIntroduce();
         assertThat(introduce).isEqualTo("My name is Tom. I am 21 years old.");
     }
 
@@ -30,7 +30,7 @@ public class Practice04Test {
     @Test
     public void should_student_introduce_with_class() throws Exception {
         Student tom = new Student("Tom", 21, 2);
-        assertThat(tom.introduce()).isEqualTo("My name is Tom. I am 21 years old. I am a Student. I am at Class 2.");
+        assertThat(tom.basicIntroduce()).isEqualTo("My name is Tom. I am 21 years old. I am a Student. I am at Class 2.");
     }
 
     @Test
@@ -43,6 +43,6 @@ public class Practice04Test {
     @Test
     public void should_worker_introduce_itself_with_no_field() throws Exception {
         Worker tom = new Worker("Tom", 21);
-        assertThat(tom.introduce()).isEqualTo("My name is Tom. I am 21 years old. I am a Worker. I have a job.");
+        assertThat(tom.basicIntroduce()).isEqualTo("My name is Tom. I am 21 years old. I am a Worker. I have a job.");
     }
 }
